@@ -1,14 +1,14 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 import tailwind from "@astrojs/tailwind";
 
-// Import the Vercel adapter
-import vercel from '@astrojs/vercel';
+// Import the Netlify adapter
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://positivustheme.vercel.app",
   integrations: [tailwind()],
-  output: 'server',
-  adapter: vercel(),
+  output: "server",
+  adapter: netlify(), // Change the adapter to Netlify
 });
